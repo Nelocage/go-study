@@ -1,4 +1,4 @@
-package main//每个go文件必须具有package关键字，且在第一行，表示go文件属于哪个包
+package main //每个go文件必须具有package关键字，且在第一行，表示go文件属于哪个包
 
 import "fmt"
 
@@ -6,41 +6,43 @@ import "fmt"
 //go 的注释与C，C++一样
 /*
 多行注释
- */
+*/
 
- //类型都是在名字之后定义，在这块即使不定义也可以，go会自动推断
-const NAME int = 56  //常量的名字最好是大写
-var name  string= "imooc"   //在main函数之外定义的变量就是全局变量，可以在包里面被调用
+//类型都是在名字之后定义，在这块即使不定义也可以，go会自动推断
+const NAME int = 56       //常量的名字最好是大写
+var name string = "imooc" //在main函数之外定义的变量就是全局变量，可以在包里面被调用
 
 //一般类型声明,相当于类型别名
 type ChenInt int
 
 //结构的声明
 type learn struct {
-
 }
 
 //接口的声明
-type Ilearn interface {  //接口的名字一般以I开头
+type Ilearn interface { //接口的名字一般以I开头
 
 }
+
 //函数定义
-func machine_learning()  {
+func machine_learning() {
 
 }
 
- //记不住包名没有问题，只要记住函数名即可，goland会自动补全，引入多个包时，goland会
- //自动添加括号
+//记不住包名没有问题，只要记住函数名即可，goland会自动补全，引入多个包时，goland会
+//自动添加括号
 //main函数
-func main()  {
+func main() {
 	fmt.Println(NAME)
 	fmt.Println(name)
 }
 
-
-
-
-
+//,   go 语言以包作为管理单位
+//2.每个函数必须先声明包
+//3.程序必须有一个main包
+//go 函数有且只有一个入口函数，main
+//入口函数，go语言函数左括号必须要放在函数名同行，不允许换行
+//调用函数，大部分都需 要导入包
 //package，import别名，路径，".",   "_"的使用说明
 
 /*
@@ -49,8 +51,8 @@ func main()  {
 3.要生成go语言可执行程序，必须要有main的package包，且必须在该包下有main（）函数
 4.同一个路径下只能存在一个package，一个package可以拆成多个源文件组成；所以在同一个
 	工程中一般都会出现很多文件夹
- */
- //package 包名 尽量与所属文件夹名称一致
+*/
+//package 包名 尽量与所属文件夹名称一致
 
 /*
 go基础语法----import
@@ -73,13 +75,6 @@ import 原理：
 	4.如果一个包被导入多次，则该包只会被导入一次
 
 综上：所以代码执行的顺序与导入包的顺序有直接关系，不同的导入顺序可能会有完全不同的输出
- */
-
-
-
-
-
-
-
+*/
 
 //go变量，函数可见规则
