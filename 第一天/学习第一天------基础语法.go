@@ -1,6 +1,6 @@
 //https://blog.csdn.net/tennysonsky/article/details/79103434  源代码可以在这个博客中找到
 // 跟着视频学的，视频的网址是https://www.bilibili.com/video/av20432910/?p=55，分上中下三个
-package main //每个go文件必须具有package关键字，且在第一行，表示go文件属于哪个包
+package 第一天 //每个go文件必须具有package关键字，且在第一行，表示go文件属于哪个包
 
 import (
 	"fmt"
