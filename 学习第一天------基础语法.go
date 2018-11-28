@@ -1,3 +1,5 @@
+//https://blog.csdn.net/tennysonsky/article/details/79103434  源代码可以在这个博客中找到
+// 跟着视频学的，视频的网址是https://www.bilibili.com/video/av20432910/?p=55，分上中下三个
 package main //每个go文件必须具有package关键字，且在第一行，表示go文件属于哪个包
 
 import (
@@ -88,7 +90,7 @@ go语言 基础语法---import别名，路径，".",   "_"
 	因此无法通过包名来调用包中的其他函数。使用下划线（_）操作往往是为了注册包中的引擎，
 	让外部可以方便的使用
 
-例子：import（   陈相伟 "fmt") 别名
+例子：import（  formant "fmt") 别名
 	import ( . "fmt"),在程序中导入函数，不需要再加包名，但是不推荐这种写法
 	import
 */
@@ -336,5 +338,6 @@ func func2(args ...int){
 	func1(args...)
 	}
 部分参数传递
-func func2（args[:2]...)  从args[2]开始进行传递
+func func2（args[2:]...)  从args[2]开始开始（包括本身），把后面所有元素传递过去，通过切片进行实现
+func func2（args[2:]...)  args[0]~args[2](不包括args[2]），全部传递过去
 */
